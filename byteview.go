@@ -1,5 +1,7 @@
 package src
 
+// 缓存值的数据结构
+
 // b存储真实的缓存值，选择byte类型是为了能支持任意数据类型，例如字符串、图片
 type ByteView struct {
 	b []byte
@@ -21,9 +23,7 @@ func cloneBytes(b []byte) []byte {
 	return c
 }
 
-// String returns the data as a string, making a copy if necessary
+// 将缓存值转化为字符串返回
 func (v ByteView) String() string {
 	return string(v.b)
 }
-
-
